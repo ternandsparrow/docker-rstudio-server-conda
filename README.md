@@ -8,7 +8,7 @@ or it might not. Still need to investigate that.
 # Build it
 
 ```bash
-docker build -t ternandsparrow/rstudio-server-conda:$(git rev-parse --short HEAD) .
+docker build -t ternandsparrow/rstudio-server-conda:v1.0.0 .
 ```
 
 # Run it
@@ -19,7 +19,8 @@ docker run \
   -d \
   --name rstudio \
   -p 8787:8787 \
-  -v my-data:/home/rstudio \
+  -v my-data:/home/rstudio/workspace \
+  -v rstudio-kitematic:/home/rstudio/kitematic \
   --restart unless-stopped \
-  ternandsparrow/rstudio-server-conda:$(git rev-parse --short HEAD)
+  ternandsparrow/rstudio-server-conda:v1.0.0
 ```
