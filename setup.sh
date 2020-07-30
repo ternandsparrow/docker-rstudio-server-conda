@@ -7,6 +7,7 @@ apt install --assume-yes --no-install-recommends \
   curl \
   apt-transport-https \
   gdal-bin \
+  jags \
   libgdal-dev
 
 cd /tmp
