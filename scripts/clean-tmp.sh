@@ -1,6 +1,6 @@
 #!/bin/bash
 # clean old temp files
-set -euxo pipfail
+set -euxo pipefail
 
 ageLimit=${1:-5}
 
